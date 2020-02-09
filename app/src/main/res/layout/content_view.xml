@@ -21,10 +21,10 @@
         android:gravity="center_horizontal"
         app:backgroundTint="@android:color/white"
         app:fabAlignmentMode="end"
-        app:fabCradleMargin="5dp"
+        app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="10dp"
-        app:fabCradleVerticalOffset="0dp"
-        app:hideOnScroll="true"
+        app:fabCradleVerticalOffset="5dp"
+        app:hideOnScroll="false"
         app:layout_scrollFlags="scroll|enterAlways">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,8 +57,8 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:onClick="bottomAppBarClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         app:backgroundTint="@color/colorPrimary"
         app:layout_anchor="@id/bottom_app_bar"
         app:srcCompat="@drawable/ic_conversations"

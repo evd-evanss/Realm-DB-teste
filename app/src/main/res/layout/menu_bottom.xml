@@ -9,7 +9,6 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:onClick="bottomAppBarClick"
-
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"

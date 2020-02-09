@@ -7,13 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profile_linearLayout_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_top_content"
         android:orientation="vertical"
-        android:paddingStart="70dp"
+        android:paddingStart="40dp"
         android:paddingTop="20dp"
         android:paddingEnd="70dp"
         android:paddingBottom="10dp"
@@ -26,17 +26,31 @@
 
         <TextView
             android:id="@+id/profile_textView_userName"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
             android:text="@string/perfil"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="87dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile_textView_userName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView2"
@@ -100,6 +114,7 @@
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="Nome"
                     android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toTopOf="@+id/view_name"
                     app:layout_constraintEnd_toStartOf="@+id/profile_view_name"
@@ -166,6 +181,7 @@
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="12/07/1959"
                     android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toTopOf="@+id/view_birthdate"
                     app:layout_constraintEnd_toStartOf="@+id/profile_view_birthdate"
@@ -232,6 +248,7 @@
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="joao.santos1959@gmail.com"
                     android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toTopOf="@+id/view_email"
                     app:layout_constraintEnd_toStartOf="@+id/profile_view_email"
@@ -291,7 +308,7 @@
 
                 <TextView
                     android:id="@+id/profile_textView_celular"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="8dp"
@@ -299,9 +316,11 @@
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="(11) 97123-0000"
                     android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toTopOf="@+id/view_celular"
                     app:layout_constraintEnd_toStartOf="@+id/profile_view_celular"
+                    app:layout_constraintStart_toEndOf="@+id/tv_location"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
@@ -333,13 +352,14 @@
 
                 <TextView
                     android:id="@+id/tv_location"
-                    android:layout_width="25dp"
+                    android:layout_width="30dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="+55"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/profile_textView_celular"
@@ -387,7 +407,7 @@
 
                 <TextView
                     android:id="@+id/profile_textView_fixed"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="8dp"
@@ -395,9 +415,11 @@
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="(11) 97123-0000"
                     android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toTopOf="@+id/view_fixed"
                     app:layout_constraintEnd_toStartOf="@+id/profile_view_fixed"
+                    app:layout_constraintStart_toEndOf="@+id/tv_location_fixed"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
@@ -429,13 +451,14 @@
 
                 <TextView
                     android:id="@+id/tv_location_fixed"
-                    android:layout_width="25dp"
+                    android:layout_width="30dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="+55"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/profile_textView_fixed"
@@ -678,7 +701,6 @@
                     android:id="@+id/profile_textView_fixed_emergency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="25dp"
                     android:layout_marginBottom="8dp"
@@ -709,10 +731,10 @@
 
                 <TextView
                     android:id="@+id/tv_location_fixed_emergency"
-                    android:layout_width="25dp"
+                    android:layout_width="30dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="21dp"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="+55"
@@ -762,7 +784,6 @@
                     android:id="@+id/profile_textView_celular_emergency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="25dp"
                     android:layout_marginBottom="8dp"
@@ -793,10 +814,10 @@
 
                 <TextView
                     android:id="@+id/tv_location_emergency"
-                    android:layout_width="25dp"
+                    android:layout_width="30dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="21dp"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/montserrat_semi_bold"
                     android:text="+55"
