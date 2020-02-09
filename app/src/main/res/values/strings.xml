@@ -1,0 +1,43 @@
+<resources>
+
+    <string name="app_name">Appia Diabetes Care</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_email">E-mail</string>
+    <string name="parear_glicos_metro">PAREAR GLICOSÍMETRO</string>
+    <string name="_87">87</string>
+    <string name="mg_dl">mg/dL</string>
+    <string name="_07_00">07:00</string>
+    <string name="_20_10">20/10</string>
+    <string name="sincronizar">Sincronizar</string>
+    <string name="nao_pareado">Não pareado</string>
+    <string name="sair">Sair do aplicativo</string>
+    <string name="telefone">Fixo</string>
+    <string name="celular">Celular</string>
+    <string name="e_mail">E-mail</string>
+    <string name="estado">Estado</string>
+    <string name="data_de_nascimento">Data de nascimento</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="editar">Editar</string>
+    <string name="perfil">Perfil</string>
+    <string name="name">Nome</string>
+    <string name="redefinicao_de_senha">Redefinição de senha</string>
+    <string name="password_confirmation">Confirme sua senha</string>
+    <string name="enter">Entrar</string>
+    <string name="save_password">Salvar senhar</string>
+    <string name="erro_teste"> Erro teste</string>
+    <string name="password_rules_label">Sua senha deve conter:</string>
+    <string name="rule_lowercase">1 letra maiúsculo</string>
+    <string name="rule_uppercase">1 letra minúsculo</string>
+    <string name="rule_number">1 número</string>
+    <string name="rule_length">8 letras no miínimo</string>
+    <string name="password">Senha</string>
+    <string name="email">E-mail</string>
+    <string name="alterar">Alterar</string>
+    <string name="relationship">Relação</string>
+    <string name="state">Estado</string>
+    <string name="SP">São Paulo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
