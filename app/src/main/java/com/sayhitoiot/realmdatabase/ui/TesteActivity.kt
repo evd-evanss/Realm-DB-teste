@@ -1,15 +1,11 @@
 package com.sayhitoiot.realmdatabase.ui
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.google.android.material.internal.ContextUtils
 import com.sayhitoiot.realmdatabase.R
 import kotlinx.android.synthetic.main.content_view.*
-import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.menu_bottom.*
 
 class TesteActivity : AppCompatActivity() {
