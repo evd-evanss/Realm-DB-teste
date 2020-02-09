@@ -5,12 +5,22 @@ import io.realm.Realm
 
 data class PersonEntity (
     val id: Int,
-    val name: String
+    val name: String,
+    var birthday: String,
+    var email: String,
+    var celular: String,
+    var fixo: String,
+    var state: String
 ) {
 
     constructor(userRealm: Person) : this(
         id = userRealm.id,
-        name = userRealm.name
+        name = userRealm.name,
+        birthday = userRealm.birthday,
+        email = userRealm.email,
+        celular = userRealm.celular,
+        fixo = userRealm.fixo,
+        state = userRealm.state
     )
 
     companion object {
@@ -34,7 +44,12 @@ data class PersonEntity (
 
         fun create(
             id: Int,
-            name: String
+            name: String,
+            birthday: String,
+            email: String,
+            celular: String,
+            fixo: String,
+            state: String
         ) {
             val realm = Realm.getDefaultInstance()
             realm.beginTransaction()
@@ -43,6 +58,11 @@ data class PersonEntity (
 
             userModel.id = id
             userModel.name = name
+            userModel.birthday = birthday
+            userModel.email = email
+            userModel.celular = celular
+            userModel.fixo = fixo
+            userModel.state = state
 
             realm.commitTransaction()
             realm.close()

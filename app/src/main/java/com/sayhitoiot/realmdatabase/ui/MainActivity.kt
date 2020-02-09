@@ -1,15 +1,11 @@
-package com.sayhitoiot.realmdatabase
+package com.sayhitoiot.realmdatabase.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import com.appiacare.androiddiabetescare.commons.database.entity.PersonEntity
-import com.sayhitoiot.realmdatabase.model.Person
+import com.sayhitoiot.realmdatabase.R
 import io.realm.Realm
-import io.realm.kotlin.createObject
-import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Integer.parseInt
 
@@ -29,8 +25,7 @@ class MainActivity : AppCompatActivity() {
                 refreshDataBase()
             }
             btn_add -> {
-                saveToDatabase(edt_name.text.toString().trim(),
-                    parseInt(edt_age.text.toString().trim()))
+                saveToDatabase()
                 clear()
             }
             btn_update -> {
@@ -50,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         realm.close()
     }
 
-    fun saveToDatabase(nome: String, id: Int){
+    fun saveToDatabase(){
 //        realm.executeTransactionAsync({ bgRealm ->
 //            val user = bgRealm.createObject<Person>()
 //            user.name = nome
@@ -61,7 +56,9 @@ class MainActivity : AppCompatActivity() {
 //        }, { error ->
 //            Log.d("save", "Falha na transação!")
 //        })
-        PersonEntity.create(id, nome)
+        PersonEntity.create(1, "Evandro Costa",
+            "20/03/1985", "evandro@appiacare.com",
+            "98858-7525", "2609-9315", "SP")
         refreshDataBase()
     }
 
